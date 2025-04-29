@@ -1035,7 +1035,7 @@ offset_left = 90.0
 offset_top = 250.0
 offset_right = 1022.0
 offset_bottom = 369.0
-text = "Thank you for playing our Demo!
+text = "Still In Development
 
 Press Esc to go back to Main Menu!"
 label_settings = SubResource("LabelSettings_sbu3s")
