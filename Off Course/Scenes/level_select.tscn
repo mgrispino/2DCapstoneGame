@@ -1,0 +1,91 @@
+[gd_scene load_steps=4 format=3 uid="uid://dc34vfgvjlmwa"]
+
+[ext_resource type="Texture2D" uid="uid://27r1kmqiq2ql" path="res://Assets/MenuBackground/Assets/Blue Version/blue-preview.png" id="1_g6xf8"]
+[ext_resource type="Script" path="res://Scenes/level_select.gd" id="1_vevht"]
+[ext_resource type="Theme" uid="uid://bqdn1hl5c7fvl" path="res://Assets/space-worm-theme/space_worm_theme.tres" id="2_chmr8"]
+
+[node name="LevelSelect" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vevht")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.001
+anchor_bottom = 1.0
+offset_right = -0.1521
+offset_bottom = -1.0
+texture = ExtResource("1_g6xf8")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.334
+anchor_top = 0.192
+anchor_right = 0.676
+anchor_bottom = 0.652
+offset_left = -0.10202
+offset_top = 7.776
+offset_right = -0.42804
+offset_bottom = 0.156006
+
+[node name="Level1" type="Button" parent="TextureRect/VBoxContainer"]
+layout_direction = 2
+layout_mode = 2
+size_flags_vertical = 2
+size_flags_stretch_ratio = 0.0
+theme = ExtResource("2_chmr8")
+theme_override_font_sizes/font_size = 32
+text = "
+Level 1
+
+"
+
+[node name="Level2" type="Button" parent="TextureRect/VBoxContainer"]
+layout_mode = 2
+focus_neighbor_bottom = NodePath("../Level1")
+theme = ExtResource("2_chmr8")
+theme_override_font_sizes/font_size = 32
+text = "
+Level 2
+
+"
+
+[node name="Level4" type="Button" parent="TextureRect/VBoxContainer"]
+layout_mode = 2
+focus_neighbor_bottom = NodePath("../Level1")
+theme = ExtResource("2_chmr8")
+theme_override_font_sizes/font_size = 32
+text = "
+Level 4
+
+"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.021
+anchor_top = 0.847
+anchor_right = 0.162
+anchor_bottom = 0.952
+offset_left = -0.192001
+offset_top = 0.143982
+offset_right = 0.376007
+offset_bottom = 0.104004
+grow_vertical = 0
+
+[node name="Back" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_chmr8")
+theme_override_font_sizes/font_size = 64
+text = "Back"
+
+[connection signal="pressed" from="TextureRect/VBoxContainer/Level1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="TextureRect/VBoxContainer/Level2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="TextureRect/VBoxContainer/Level4" to="." method="_on_level_4_pressed"]
+[connection signal="pressed" from="VBoxContainer/Back" to="." method="_on_back_pressed"]

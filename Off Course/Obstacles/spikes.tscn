@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bd06ewbxwrgwn"]
+
+[ext_resource type="Texture2D" uid="uid://ds0u6n85kpnqd" path="res://Assets/FreeSciFiPlatform/png/Tiles/Spike.png" id="1_frthx"]
+[ext_resource type="Script" path="res://Obstacles/spike.gd" id="1_xdoqf"]
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_xdoqf")
+
+[node name="Spike2" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(0.631915, 0.546679)
+texture = ExtResource("1_frthx")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(0, 4)
+scale = Vector2(0.631915, 0.546679)
+polygon = PackedVector2Array(0, -43.9014, -25.3199, 64.0229, -42.7273, -14.6338, -64.8822, 76.8275, -90.202, -38.4137, -96.532, 124.387, 94.9495, 122.558, 90.202, -38.4137, 63.2997, 82.3151, 42.7273, 0, 28.4849, 64.0229, 0, -47.5599)

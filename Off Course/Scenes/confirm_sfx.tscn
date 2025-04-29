@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dxlfv7ce2753q"]
+
+[ext_resource type="AudioStream" uid="uid://dv6lu3ox2ahtg" path="res://Assets/SFX/Confirm 1.wav" id="1_lslbj"]
+
+[node name="confirmSFX" type="AudioStreamPlayer"]
+stream = ExtResource("1_lslbj")

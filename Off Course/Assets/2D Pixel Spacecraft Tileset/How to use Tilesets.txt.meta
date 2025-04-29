@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 899fd484710b35142b844389c1df7b04
+timeCreated: 1510569199
+licenseType: Store
+TextScriptImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 70802
+  packageName: 2D Pixel Spacecraft Tileset
+  packageVersion: 1.0
+  assetPath: Assets/2D Pixel Spacecraft Tileset/How to use Tilesets.txt
+  uploadId: 212120

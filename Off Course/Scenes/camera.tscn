@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://wxo3iokn0wbl"]
+
+[ext_resource type="Texture2D" uid="uid://brokgc0up4g3s" path="res://Assets/2D Pixel Spacecraft Tileset/Props/camera.png" id="1_h4mu6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2p25v"]
+atlas = ExtResource("1_h4mu6")
+region = Rect2(0, 0, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yro5k"]
+atlas = ExtResource("1_h4mu6")
+region = Rect2(0, 16, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kwojj"]
+atlas = ExtResource("1_h4mu6")
+region = Rect2(0, 32, 48, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pursg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2p25v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yro5k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kwojj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yro5k")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_pursg")
+autoplay = "default"

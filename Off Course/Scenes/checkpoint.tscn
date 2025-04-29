@@ -1,0 +1,79 @@
+[gd_scene load_steps=11 format=3 uid="uid://u0gjlhs2n2pp"]
+
+[ext_resource type="Texture2D" uid="uid://3wbpq2w5v72a" path="res://Assets/2D Pixel Spacecraft Tileset/Props/teleporter savepoint.png" id="1_2amkm"]
+[ext_resource type="Script" path="res://Scenes/checkpoint.gd" id="1_ntpp5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iu2br"]
+atlas = ExtResource("1_2amkm")
+region = Rect2(32, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ctwlq"]
+atlas = ExtResource("1_2amkm")
+region = Rect2(64, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6nipf"]
+atlas = ExtResource("1_2amkm")
+region = Rect2(96, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g02yb"]
+atlas = ExtResource("1_2amkm")
+region = Rect2(128, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iw115"]
+atlas = ExtResource("1_2amkm")
+region = Rect2(160, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rvxsl"]
+atlas = ExtResource("1_2amkm")
+region = Rect2(0, 0, 32, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rkkno"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iu2br")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ctwlq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6nipf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g02yb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iw115")
+}],
+"loop": true,
+"name": &"Active",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rvxsl")
+}],
+"loop": true,
+"name": &"Inactive",
+"speed": 1.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5hpld"]
+size = Vector2(28, 49)
+
+[node name="Checkpoint" type="Area2D"]
+script = ExtResource("1_ntpp5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-1, -0.499999)
+scale = Vector2(0.9375, 1.02083)
+sprite_frames = SubResource("SpriteFrames_rkkno")
+animation = &"Inactive"
+autoplay = "Inactive"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_5hpld")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
