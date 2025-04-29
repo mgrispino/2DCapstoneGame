@@ -5,13 +5,13 @@ Plan on things to add
 
 Checkpoints - Done
 
-4 Levels
+2 Levels + Ending
 
 Death sound - Done
 
-More Obstacles
+1 More Obstacle Moving Saw - In Progress
 
-More Asssets/Level Details
+Level Details - In Progress
 
 Editing tutorial/controls to explain keycards and checkpoints - Done
 
