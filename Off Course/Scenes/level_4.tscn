@@ -1338,6 +1338,49 @@ position = Vector2(728, -688)
 rotation = 3.14159
 scale = Vector2(0.3, 0.223)
 
+[node name="Spike43" parent="Obstacles/Spikes" instance=ExtResource("4_lanpw")]
+position = Vector2(428, -815)
+scale = Vector2(0.3, 0.223)
+
+[node name="Spike44" parent="Obstacles/Spikes" instance=ExtResource("4_lanpw")]
+position = Vector2(462, -815)
+scale = Vector2(0.3, 0.223)
+
+[node name="Spike45" parent="Obstacles/Spikes" instance=ExtResource("4_lanpw")]
+position = Vector2(669, -822)
+scale = Vector2(0.3, 0.35)
+
+[node name="Spike46" parent="Obstacles/Spikes" instance=ExtResource("4_lanpw")]
+position = Vector2(848, -822)
+scale = Vector2(0.3, 0.35)
+
+[node name="Spike47" parent="Obstacles/Spikes" instance=ExtResource("4_lanpw")]
+position = Vector2(993, -823)
+scale = Vector2(0.3, 0.35)
+
+[node name="Spike48" parent="Obstacles/Spikes" instance=ExtResource("4_lanpw")]
+position = Vector2(895, -921)
+rotation = 3.14159
+scale = Vector2(0.3, 0.35)
+
+[node name="Spike49" parent="Obstacles/Spikes" instance=ExtResource("4_lanpw")]
+position = Vector2(720, -920)
+rotation = 3.14159
+scale = Vector2(0.3, 0.35)
+
+[node name="Spike50" parent="Obstacles/Spikes" instance=ExtResource("4_lanpw")]
+position = Vector2(543, -920)
+rotation = 3.14159
+scale = Vector2(0.3, 0.35)
+
+[node name="Spike51" parent="Obstacles/Spikes" instance=ExtResource("4_lanpw")]
+position = Vector2(1027, -823)
+scale = Vector2(0.3, 0.35)
+
+[node name="Spike52" parent="Obstacles/Spikes" instance=ExtResource("4_lanpw")]
+position = Vector2(1056, -823)
+scale = Vector2(0.3, 0.35)
+
 [node name="Saws" type="Node2D" parent="Obstacles"]
 
 [node name="Moving Saw" parent="Obstacles/Saws" instance=ExtResource("5_ydb1d")]
@@ -1347,7 +1390,7 @@ scale = Vector2(1.4, 1.4)
 [node name="Moving Saw2" parent="Obstacles/Saws" instance=ExtResource("5_ydb1d")]
 position = Vector2(408, -872)
 scale = Vector2(2.8, 2.8)
-Speed = 0.45
+Speed = 0.35
 
 [node name="StartDoor" type="Sprite2D" parent="."]
 position = Vector2(530, 385)
