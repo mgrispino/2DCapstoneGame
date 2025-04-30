@@ -1421,6 +1421,7 @@ position = Vector2(2.5, -7.5)
 shape = SubResource("RectangleShape2D_h3tga")
 
 [node name="Blue-preview" type="Sprite2D" parent="."]
+visible = false
 show_behind_parent = true
 position = Vector2(1135, 301)
 scale = Vector2(4.8, 4.8)

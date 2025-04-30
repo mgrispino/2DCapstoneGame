@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ds0u6n85kpnqd" path="res://Assets/FreeSciFiPlatform/png/Tiles/Spike.png" id="1_frthx"]
 [ext_resource type="Script" path="res://Obstacles/spike.gd" id="1_xdoqf"]
 
-[node name="Area2D" type="Area2D"]
+[node name="Spikes" type="Area2D"]
 script = ExtResource("1_xdoqf")
 
 [node name="Spike2" type="Sprite2D" parent="."]
