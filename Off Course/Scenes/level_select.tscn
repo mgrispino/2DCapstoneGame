@@ -56,6 +56,16 @@ Level 2
 
 "
 
+[node name="Level3" type="Button" parent="TextureRect/VBoxContainer"]
+layout_mode = 2
+focus_neighbor_bottom = NodePath("../Level1")
+theme = ExtResource("2_chmr8")
+theme_override_font_sizes/font_size = 32
+text = "
+Level 3
+
+"
+
 [node name="Level4" type="Button" parent="TextureRect/VBoxContainer"]
 layout_mode = 2
 focus_neighbor_bottom = NodePath("../Level1")
@@ -87,5 +97,6 @@ text = "Back"
 
 [connection signal="pressed" from="TextureRect/VBoxContainer/Level1" to="." method="_on_level_1_pressed"]
 [connection signal="pressed" from="TextureRect/VBoxContainer/Level2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="TextureRect/VBoxContainer/Level3" to="." method="_on_level_3_pressed"]
 [connection signal="pressed" from="TextureRect/VBoxContainer/Level4" to="." method="_on_level_4_pressed"]
 [connection signal="pressed" from="VBoxContainer/Back" to="." method="_on_back_pressed"]
