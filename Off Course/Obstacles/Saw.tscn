@@ -1,0 +1,85 @@
+[gd_scene load_steps=13 format=3 uid="uid://dgkl1d5lkut0b"]
+
+[ext_resource type="Texture2D" uid="uid://44pvwsu77liw" path="res://Assets/Traps/Saw/On (38x38).png" id="1_jef32"]
+[ext_resource type="Script" path="res://Obstacles/saw.gd" id="1_vk8lc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2b1pf"]
+atlas = ExtResource("1_jef32")
+region = Rect2(0, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ffr01"]
+atlas = ExtResource("1_jef32")
+region = Rect2(38, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gx2d2"]
+atlas = ExtResource("1_jef32")
+region = Rect2(76, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7tses"]
+atlas = ExtResource("1_jef32")
+region = Rect2(114, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gnnnq"]
+atlas = ExtResource("1_jef32")
+region = Rect2(152, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c4cnu"]
+atlas = ExtResource("1_jef32")
+region = Rect2(190, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xy3mj"]
+atlas = ExtResource("1_jef32")
+region = Rect2(228, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gamjt"]
+atlas = ExtResource("1_jef32")
+region = Rect2(266, 0, 38, 38)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_plvil"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2b1pf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ffr01")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gx2d2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7tses")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gnnnq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c4cnu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xy3mj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gamjt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vvmmb"]
+radius = 20.0
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_vk8lc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_plvil")
+autoplay = "default"
+frame_progress = 0.625187
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_vvmmb")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

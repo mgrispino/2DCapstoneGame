@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://clva4n7rdb7lj"]
+
+[ext_resource type="PackedScene" uid="uid://dgkl1d5lkut0b" path="res://Obstacles/Saw.tscn" id="1_we20e"]
+
+[sub_resource type="Curve2D" id="Curve2D_q71we"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 194, 2, 0, 0, 0, 0, 199, 1)
+}
+point_count = 5
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(-1, 0)
+
+[node name="Area2D" parent="." instance=ExtResource("1_we20e")]
+position = Vector2(0, -1)
+
+[node name="Path2D" type="Path2D" parent="Area2D"]
+curve = SubResource("Curve2D_q71we")
