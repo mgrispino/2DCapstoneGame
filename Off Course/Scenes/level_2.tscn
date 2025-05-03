@@ -1440,6 +1440,7 @@ position = Vector2(1180, 430)
 scale = Vector2(2.4375, 2.66667)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("11_5yact")]
 
