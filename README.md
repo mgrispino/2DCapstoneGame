@@ -5,13 +5,13 @@ Plan on things to add
 
 Checkpoints - Done
 
-2 Levels + Ending
+2 Levels + Ending // Level 4 Done // Level 3 in development + ending scene needs to get started
 
 Death sound - Done
 
-1 More Obstacle Moving Saw - In Progress
+1 More Obstacle Moving Saw - Done
 
-Level Details - In Progress
+Level Details - Done
 
 Editing tutorial/controls to explain keycards and checkpoints - Done
 
