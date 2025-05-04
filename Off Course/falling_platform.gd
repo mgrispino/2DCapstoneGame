@@ -1,7 +1,6 @@
 extends RigidBody2D
 
 func _ready():
-	original_position = global_position
 	freeze = true
 	$Timer.wait_time = 1.0
 	$Timer.one_shot = true
