@@ -66,6 +66,7 @@ sprite_frames = SubResource("SpriteFrames_5jm0d")
 autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+texture_filter = 1
 position = Vector2(0, -0.5)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_7xs4g")
