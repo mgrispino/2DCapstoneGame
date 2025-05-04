@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://lbb5y1264f7w"]
 
-[ext_resource type="Script" path="res://disappearing_electro_barrier.gd" id="1_b5ku2"]
+[ext_resource type="Script" path="res://Obstacles/disappearing_electro_barrier.gd" id="1_b5ku2"]
 [ext_resource type="Texture2D" uid="uid://bf7ia1bfms8nv" path="res://Assets/2D Pixel Spacecraft Tileset/Props/electro barrier.png" id="2_fwntb"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i2gd4"]

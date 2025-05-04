@@ -1,0 +1,83 @@
+[gd_scene load_steps=12 format=3 uid="uid://cfruk0isrp2uy"]
+
+[ext_resource type="Script" path="res://falling_platform.gd" id="1_4ecdo"]
+[ext_resource type="Texture2D" uid="uid://dpbsa65g7y83m" path="res://Assets/Traps/Falling Platforms/Off.png" id="2_7gemv"]
+[ext_resource type="Texture2D" uid="uid://b0y72valn7ay1" path="res://Assets/Traps/Falling Platforms/On (32x10).png" id="3_7igwb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r4u05"]
+size = Vector2(64, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f5ukp"]
+atlas = ExtResource("2_7gemv")
+region = Rect2(0, 0, 32, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ntbll"]
+atlas = ExtResource("3_7igwb")
+region = Rect2(0, 0, 32, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w35dl"]
+atlas = ExtResource("3_7igwb")
+region = Rect2(32, 0, 32, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yg5o6"]
+atlas = ExtResource("3_7igwb")
+region = Rect2(64, 0, 32, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ksula"]
+atlas = ExtResource("3_7igwb")
+region = Rect2(96, 0, 32, 10)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ptbdl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f5ukp")
+}],
+"loop": true,
+"name": &"Off",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ntbll")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w35dl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yg5o6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ksula")
+}],
+"loop": true,
+"name": &"On",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wn11b"]
+size = Vector2(58, 11)
+
+[node name="FallingPlatform" type="RigidBody2D"]
+script = ExtResource("1_4ecdo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_r4u05")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_ptbdl")
+animation = &"On"
+autoplay = "On"
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -15.5)
+shape = SubResource("RectangleShape2D_wn11b")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

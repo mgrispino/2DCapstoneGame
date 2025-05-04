@@ -12,3 +12,4 @@ func _ready():
 func respawn():
 	global_position = start_position
 	velocity = Vector2.ZERO
+	emit_signal("player_respawned")
