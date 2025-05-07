@@ -1633,7 +1633,6 @@ offset_right = 11.0
 offset_bottom = -87.0
 
 [node name="Blue-preview" type="Sprite2D" parent="."]
-visible = false
 show_behind_parent = true
 texture_filter = 1
 position = Vector2(844, -137)
