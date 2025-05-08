@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-const MAX_TIME := 0.5 * 60  # change 20 to another number to change timer
+const MAX_TIME := 20 * 60  # change 20 to another number to change timer
 var has_faded := false
 
 func _process(delta):
@@ -8,8 +8,8 @@ func _process(delta):
 		var time = GameTimer.get_time()
 		if time >= MAX_TIME and not has_faded:
 			has_faded = true
-			GameTimer.stop_timer()
 			fade_to_black()
+			GameTimer.stop_timer()
 			return
 
 		var minutes = int(time) / 60

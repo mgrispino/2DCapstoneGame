@@ -6,7 +6,6 @@ var is_running: bool = false
 func _process(delta):
 	if is_running:
 		time_elapsed += delta
-		print(time_elapsed)
 
 func start_timer():
 	is_running = true
