@@ -22,6 +22,6 @@ func fade_to_black():
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "fade_black":
 		GameTimer.reset_timer()
-		await get_tree().create_timer(2.0).timeout
+		await get_tree().create_timer(1.0).timeout
 		get_tree().change_scene_to_file("res://Scenes/MainMenu.tscn")
 	pass # Replace with function body.
