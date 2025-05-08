@@ -1,0 +1,71 @@
+[gd_scene load_steps=6 format=3 uid="uid://f5wd0ms442v4"]
+
+[ext_resource type="Script" path="res://Scenes/Timer.gd" id="1_py3nx"]
+[ext_resource type="Theme" uid="uid://bqdn1hl5c7fvl" path="res://Assets/space-worm-theme/space_worm_theme.tres" id="2_hje6i"]
+
+[sub_resource type="Animation" id="Animation_twqbu"]
+resource_name = "fade_black"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_32boh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5vh6p"]
+_data = {
+"RESET": SubResource("Animation_32boh"),
+"fade_black": SubResource("Animation_twqbu")
+}
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_py3nx")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_5vh6p")
+}
+
+[node name="TimerLabel" type="Label" parent="."]
+texture_filter = 1
+anchors_preset = -1
+anchor_right = 0.034
+anchor_bottom = 0.035
+offset_right = 0.831997
+offset_bottom = 0.32
+theme = ExtResource("2_hje6i")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

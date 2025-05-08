@@ -19,6 +19,8 @@ config/icon="res://icon.svg"
 
 AudioPlayer="*res://Scenes/audio_player.tscn"
 ConfirmSfx="*res://Scenes/confirm_sfx.tscn"
+GameTimer="*res://Scenes/gameTimer.gd"
+timerUI="*res://Scenes/timerUI.tscn"
 
 [display]
 
