@@ -7,7 +7,7 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_qs7m6"]
 font = ExtResource("3_w25yw")
-font_size = 93
+font_size = 64
 
 [node name="Menu" type="Control"]
 layout_mode = 3
