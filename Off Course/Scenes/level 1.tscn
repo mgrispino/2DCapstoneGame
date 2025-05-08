@@ -1910,6 +1910,7 @@ size = Vector2(265, 445)
 
 [sub_resource type="LabelSettings" id="LabelSettings_4uuoj"]
 font = ExtResource("11_sjw0u")
+font_size = 32
 
 [node name="Node2D2" type="Node2D"]
 position = Vector2(1, 0)
@@ -2065,7 +2066,8 @@ offset_top = 188.0
 offset_right = 260.0
 offset_bottom = 217.0
 text = "Get to the Control Room
-to get the ship back on Course"
+to get the ship back on Course!
+You have 20 minutes!"
 label_settings = SubResource("LabelSettings_4uuoj")
 horizontal_alignment = 1
 

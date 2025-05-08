@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://bey7jvhs5yr0h"]
+[gd_scene load_steps=20 format=4 uid="uid://bey7jvhs5yr0h"]
 
 [ext_resource type="Texture2D" uid="uid://c4ctgqovnoofk" path="res://Assets/2D Pixel Spacecraft Tileset/Tileset/tileset.png" id="1_7sjmc"]
 [ext_resource type="Texture2D" uid="uid://c6codkmlbdi0t" path="res://Assets/2D Pixel Spacecraft Tileset/Tileset/Spaceship2.png" id="2_5y2rc"]
@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://w41w1q5bkr80" path="res://Obstacles/electrobarrier.tscn" id="8_pjfyc"]
 [ext_resource type="PackedScene" uid="uid://u0gjlhs2n2pp" path="res://Scenes/checkpoint.tscn" id="9_uicef"]
 [ext_resource type="PackedScene" uid="uid://clva4n7rdb7lj" path="res://Obstacles/MovingSaw.tscn" id="10_36skv"]
-[ext_resource type="PackedScene" uid="uid://cfruk0isrp2uy" path="res://Obstacles/falling_platform.tscn" id="11_b8mbu"]
 [ext_resource type="PackedScene" uid="uid://dgkl1d5lkut0b" path="res://Obstacles/Saw.tscn" id="11_j6c8r"]
 [ext_resource type="PackedScene" uid="uid://bd06ewbxwrgwn" path="res://Obstacles/spikes.tscn" id="12_glwt3"]
 [ext_resource type="PackedScene" uid="uid://lbb5y1264f7w" path="res://Obstacles/disappearing_electro_barrier.tscn" id="13_umr6k"]
@@ -1576,21 +1575,6 @@ position = Vector2(114.662, 0.000488281)
 
 [node name="SideSpike3" parent="Obstacles/SideSpike2" instance=ExtResource("12_glwt3")]
 position = Vector2(-114.662, -0.000610352)
-
-[node name="FallingPlatform" parent="Obstacles" instance=ExtResource("11_b8mbu")]
-position = Vector2(167, 187)
-
-[node name="FallingPlatform2" parent="Obstacles" instance=ExtResource("11_b8mbu")]
-position = Vector2(300, 146)
-
-[node name="FallingPlatform3" parent="Obstacles" instance=ExtResource("11_b8mbu")]
-position = Vector2(455, 192)
-
-[node name="FallingPlatform4" parent="Obstacles" instance=ExtResource("11_b8mbu")]
-position = Vector2(740, 215)
-
-[node name="FallingPlatform5" parent="Obstacles" instance=ExtResource("11_b8mbu")]
-position = Vector2(1012, 169)
 
 [node name="Checkpoint" parent="." instance=ExtResource("9_uicef")]
 position = Vector2(1296, 280)
