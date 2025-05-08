@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://f5wd0ms442v4"]
+[gd_scene load_steps=7 format=3 uid="uid://f5wd0ms442v4"]
 
 [ext_resource type="Script" path="res://Scenes/Timer.gd" id="1_py3nx"]
 [ext_resource type="Theme" uid="uid://bqdn1hl5c7fvl" path="res://Assets/space-worm-theme/space_worm_theme.tres" id="2_hje6i"]
@@ -34,10 +34,27 @@ tracks/0/keys = {
 "values": [Color(0, 0, 0, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_5wg3o"]
+resource_name = "reset"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5vh6p"]
 _data = {
 "RESET": SubResource("Animation_32boh"),
-"fade_black": SubResource("Animation_twqbu")
+"fade_black": SubResource("Animation_twqbu"),
+"reset": SubResource("Animation_5wg3o")
 }
 
 [node name="CanvasLayer" type="CanvasLayer"]

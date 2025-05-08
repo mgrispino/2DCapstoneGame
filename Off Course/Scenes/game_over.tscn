@@ -1,6 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://cujrgwi73p8eq"]
+[gd_scene load_steps=5 format=3 uid="uid://cujrgwi73p8eq"]
 
 [ext_resource type="Theme" uid="uid://bqdn1hl5c7fvl" path="res://Assets/space-worm-theme/space_worm_theme.tres" id="1_7ns5c"]
+[ext_resource type="Script" path="res://Scenes/game_over.gd" id="1_81ycf"]
+[ext_resource type="FontFile" uid="uid://dkqwunfjhx6d7" path="res://Assets/font/monogram.ttf" id="1_j0rji"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ngboi"]
+font = ExtResource("1_j0rji")
+font_size = 93
 
 [node name="GameOver" type="Control"]
 layout_mode = 3
@@ -9,6 +15,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_81ycf")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -19,35 +26,48 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="Start" type="Button" parent="ColorRect"]
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
 layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = 454.0
-offset_top = -15.0
-offset_right = 533.0
-offset_bottom = 15.0
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.33
+offset_bottom = 0.159988
+text = "Game Over"
+label_settings = SubResource("LabelSettings_ngboi")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MainMenu" type="Button" parent="."]
+texture_filter = 1
+layout_mode = 2
+offset_left = 369.0
+offset_top = 300.0
+offset_right = 448.0
+offset_bottom = 330.0
 grow_vertical = 2
+scale = Vector2(2, 2)
 size_flags_horizontal = 4
+size_flags_vertical = 4
 focus_neighbor_top = NodePath("../Quit")
 theme = ExtResource("1_7ns5c")
-text = "Continue?"
+text = "Main Menu"
 
-[node name="Start2" type="Button" parent="ColorRect"]
-layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -498.0
-offset_top = -15.0
-offset_right = -454.0
-offset_bottom = 15.0
+[node name="Quit" type="Button" parent="."]
+texture_filter = 1
+layout_mode = 2
+offset_left = 669.0
+offset_top = 300.0
+offset_right = 713.0
+offset_bottom = 330.0
 grow_horizontal = 0
 grow_vertical = 2
+scale = Vector2(2, 2)
 size_flags_horizontal = 4
+size_flags_vertical = 4
 focus_neighbor_top = NodePath("../Quit")
 theme = ExtResource("1_7ns5c")
 text = "Quit"
+
+[connection signal="pressed" from="MainMenu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
