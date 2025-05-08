@@ -3,6 +3,9 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	timerUI.hide()
+	GameTimer.stop_timer()
+	GameTimer.reset_timer()
 	pass # Replace with function body.
 
 
