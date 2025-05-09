@@ -1163,6 +1163,7 @@ _data = {
 }
 
 [node name="Spaceship Cockpit" type="Node2D"]
+position = Vector2(13, 0)
 
 [node name="Blue-preview" type="Sprite2D" parent="."]
 show_behind_parent = true
@@ -1218,27 +1219,26 @@ horizontal_alignment = 1
 script = ExtResource("8_qv210")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Switch"]
-position = Vector2(664, 471)
+position = Vector2(664, 472)
 shape = SubResource("CircleShape2D_r0q1t")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
+[node name="FadetoBlack" type="CanvasLayer" parent="."]
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+[node name="ColorRect" type="ColorRect" parent="FadetoBlack"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -889.0
-offset_top = -369.0
-offset_right = 730.0
-offset_bottom = 542.0
+offset_left = -1184.0
+offset_top = -535.0
+offset_right = 945.0
+offset_bottom = 663.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 color = Color(0, 0, 0, 0)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="FadetoBlack"]
 libraries = {
 "": SubResource("AnimationLibrary_5vh6p")
 }
